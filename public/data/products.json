@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "sm-raw-1",
+      "name": "Raw Gold Sea Moss",
+      "category": "sea-moss",
+      "price": 24.99,
+      "image": "/assets/sea-moss-raw-gold.png",
+      "description": "Wildcrafted sea moss for daily mineral support.",
+      "stock": 50
+    },
+    {
+      "id": "sm-gel-mango-1",
+      "name": "Mango Sea Moss Gel",
+      "category": "sea-moss",
+      "price": 29.99,
+      "image": "/assets/sea-moss-gel-mango.png",
+      "description": "Infused gel with mango for flavor and performance.",
+      "stock": 40"
+    },
+    {
+      "id": "tee-black-logo-1",
+      "name": "Gainz Shop Logo Tee",
+      "category": "apparel",
+      "price": 34.99,
+      "image": "/assets/tee-black-logo.png",
+      "description": "Soft black tee with Gainz Shop logo.",
+      "sizes": ["S","M","L","XL"],
+      "stock": 80
+    }
+  ]
+}
