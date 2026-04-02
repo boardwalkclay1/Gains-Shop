@@ -3,8 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <title>Gainz Shop</title>
-  <link rel="stylesheet" href="/css/main.css" />
+
+  <style>
+    /* ---------------------------------------------
+       GAINZ SHOP — GLOBAL BRAND CSS
+       Clean • Cinematic • Modular
+    ----------------------------------------------*/
+
+    :root {
+      --gs-black: #0a0a0a;
+      --gs-white: #ffffff;
+      --gs-green: #00c46b;
+      --gs-yellow: #ffd447;
+
+      --gs-card-bg: rgba(255,255,255,0.05);
+      --gs-card-border: rgba(255,255,255,0.12);
+
+      --gs-radius: 14px;
+      --gs-shadow: 0 0 25px rgba(0,0,0,0.35);
+      --gs-glow: 0 0 12px rgba(0,196,107,0.55);
+
+      --gs-font-main: 'Inter', sans-serif;
+      --gs-font-heading: 'Bebas Neue', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--gs-black);
+      color: var(--gs-white);
+      font-family: var(--gs-font-main);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* HEADER */
+    .gs-header {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--gs-black);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .gs-logo {
+      font-family: var(--gs-font-heading);
+      font-size: 38px;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .gs-logo:hover {
+      color: var(--gs-green);
+      text-shadow: var(--gs-glow);
+    }
+
+    .gs-nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    .gs-nav a {
+      color: var(--gs-white);
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.2s ease;
+    }
+
+    .gs-nav a:hover {
+      color: var(--gs-green);
+    }
+
+    /* MAIN WRAPPER */
+    #app {
+      padding: 40px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: var(--gs-font-heading);
+      font-size: 48px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    /* PRODUCT GRID */
+    section {
+      margin-bottom: 80px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .product-card {
+      background: var(--gs-card-bg);
+      border: 1px solid var(--gs-card-border);
+      border-radius: var(--gs-radius);
+      padding: 20px;
+      width: 280px;
+      box-shadow: var(--gs-shadow);
+      backdrop-filter: blur(6px);
+      transition: 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--gs-green);
+      box-shadow: var(--gs-glow);
+    }
+
+    .product-card h3 {
+      font-family: var(--gs-font-heading);
+      font-size: 28px;
+      margin: 12px 0;
+    }
+
+    .product-card p {
+      opacity: 0.8;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .product-card strong {
+      font-size: 20px;
+      color: var(--gs-green);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--gs-green);
+      border: none;
+      border-radius: var(--gs-radius);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background: var(--gs-yellow);
+      color: var(--gs-black);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .gs-header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      #app {
+        padding: 20px;
+      }
+
+      .product-grid {
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="gs-header">
     <div id="gs-logo" class="gs-logo">GAINZ SHOP</div>
@@ -17,9 +193,78 @@
   </header>
 
   <main id="app">
-    <!-- normal storefront content here -->
+
+    <!-- HERO / INTRO -->
+    <section>
+      <h2>Fuel Your Body. Build Your Gainz.</h2>
+      <p style="max-width:700px; opacity:0.8; font-size:18px; margin-bottom:40px;">
+        Premium sea moss and performance apparel designed to elevate your lifestyle.
+      </p>
+    </section>
+
+    <!-- SEA MOSS SECTION -->
+    <section id="sea-moss">
+      <h2>Sea Moss</h2>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x250?text=Sea+Moss" />
+          <h3>Raw Gold Sea Moss</h3>
+          <p>Wildcrafted, nutrient-rich sea moss for daily mineral support.</p>
+          <strong>$24.99</strong>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x250?text=Mango+Gel" />
+          <h3>Mango Sea Moss Gel</h3>
+          <p>Infused with mango for flavor, energy, and performance.</p>
+          <strong>$29.99</strong>
+          <button>Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- APPAREL SECTION -->
+    <section id="apparel">
+      <h2>Apparel</h2>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x250?text=Logo+Tee" />
+          <h3>Gainz Shop Tee</h3>
+          <p>Soft, breathable, and built for movement.</p>
+          <strong>$34.99</strong>
+          <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x250?text=Hoodie" />
+          <h3>Gainz Hoodie</h3>
+          <p>Warm, durable, and perfect for training or lifestyle.</p>
+          <strong>$49.99</strong>
+          <button>Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
-  <script src="/js/main.js"></script>
+  <script>
+    // Hidden dashboard unlock
+    let gsClickCount = 0;
+    const gsLogo = document.getElementById('gs-logo');
+
+    gsLogo.addEventListener('click', () => {
+      gsClickCount++;
+      if (gsClickCount >= 4) {
+        gsClickCount = 0;
+        window.location.href = '/admin.html';
+      }
+    });
+  </script>
+
 </body>
 </html>
