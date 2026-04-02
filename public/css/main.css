@@ -1,0 +1,258 @@
+/* ---------------------------------------------
+   GAINZ SHOP — GLOBAL BRAND CSS
+   Clean • Cinematic • Modular
+----------------------------------------------*/
+
+/* ---------- ROOT BRAND VARIABLES ---------- */
+:root {
+  --gs-black: #0a0a0a;
+  --gs-white: #ffffff;
+  --gs-green: #00c46b;
+  --gs-yellow: #ffd447;
+
+  --gs-card-bg: rgba(255,255,255,0.05);
+  --gs-card-border: rgba(255,255,255,0.12);
+
+  --gs-radius: 14px;
+  --gs-shadow: 0 0 25px rgba(0,0,0,0.35);
+  --gs-glow: 0 0 12px rgba(0,196,107,0.55);
+
+  --gs-font-main: 'Inter', sans-serif;
+  --gs-font-heading: 'Bebas Neue', sans-serif;
+}
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--gs-black);
+  color: var(--gs-white);
+  font-family: var(--gs-font-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+.gs-header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gs-black);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.gs-logo {
+  font-family: var(--gs-font-heading);
+  font-size: 38px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.gs-logo:hover {
+  color: var(--gs-green);
+  text-shadow: var(--gs-glow);
+}
+
+.gs-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.gs-nav a {
+  color: var(--gs-white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.gs-nav a:hover {
+  color: var(--gs-green);
+}
+
+/* ---------- MAIN CONTENT WRAPPER ---------- */
+#app {
+  padding: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* ---------- SECTION HEADERS ---------- */
+section h2 {
+  font-family: var(--gs-font-heading);
+  font-size: 48px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* ---------- PRODUCT GRID ---------- */
+section {
+  margin-bottom: 80px;
+}
+
+.product-card {
+  background: var(--gs-card-bg);
+  border: 1px solid var(--gs-card-border);
+  border-radius: var(--gs-radius);
+  padding: 20px;
+  width: 280px;
+  box-shadow: var(--gs-shadow);
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gs-green);
+  box-shadow: var(--gs-glow);
+}
+
+.product-card h3 {
+  font-family: var(--gs-font-heading);
+  font-size: 28px;
+  margin: 12px 0;
+}
+
+.product-card p {
+  opacity: 0.8;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.product-card strong {
+  font-size: 20px;
+  color: var(--gs-green);
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--gs-green);
+  border: none;
+  border-radius: var(--gs-radius);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--gs-yellow);
+  color: var(--gs-black);
+}
+
+/* ---------- GRID LAYOUT ---------- */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+section > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* ---------------------------------------------
+   ADMIN DASHBOARD
+----------------------------------------------*/
+
+.gs-admin-body {
+  background: var(--gs-black);
+  color: var(--gs-white);
+}
+
+.gs-admin-main {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.gs-admin-sidebar {
+  width: 260px;
+  background: rgba(255,255,255,0.05);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gs-admin-sidebar button {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  text-align: left;
+}
+
+.gs-admin-sidebar button:hover {
+  background: var(--gs-green);
+  color: var(--gs-black);
+}
+
+.gs-admin-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.gs-admin-content h2 {
+  font-family: var(--gs-font-heading);
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.gs-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gs-admin-row {
+  background: rgba(255,255,255,0.05);
+  padding: 18px;
+  border-radius: var(--gs-radius);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .gs-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #app {
+    padding: 20px;
+  }
+
+  section > div {
+    justify-content: center;
+  }
+
+  .gs-admin-main {
+    flex-direction: column;
+  }
+
+  .gs-admin-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+}
